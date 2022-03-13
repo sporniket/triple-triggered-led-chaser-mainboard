@@ -1,0 +1,951 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Triple jeu de lumière - Carte principale"
+Date "2022-03-09"
+Rev "0-0-0"
+Comp ""
+Comment1 "Triple triggered led chaser mainboard"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J101
+U 1 1 6228446C
+P 1000 1500
+F 0 "J101" H 1000 1600 50  0000 C CNN
+F 1 "To battery holder" H 1000 1300 50  0000 C CNN
+F 2 "" H 1000 1500 50  0001 C CNN
+F 3 "~" H 1000 1500 50  0001 C CNN
+	1    1000 1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0101
+U 1 1 62284E7E
+P 1500 1500
+F 0 "#PWR0101" H 1500 1350 50  0001 C CNN
+F 1 "VCC" H 1500 1650 50  0000 C CNN
+F 2 "" H 1500 1500 50  0001 C CNN
+F 3 "" H 1500 1500 50  0001 C CNN
+	1    1500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6228507E
+P 1500 1600
+F 0 "#PWR0102" H 1500 1350 50  0001 C CNN
+F 1 "GND" H 1500 1450 50  0000 C CNN
+F 2 "" H 1500 1600 50  0001 C CNN
+F 3 "" H 1500 1600 50  0001 C CNN
+	1    1500 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 1500 1200 1500
+Wire Wire Line
+	1200 1600 1500 1600
+$Comp
+L Device:R_Small_US R101
+U 1 1 62285687
+P 2500 1500
+F 0 "R101" V 2650 1450 50  0000 L CNN
+F 1 "1K" V 2400 1450 50  0000 L CNN
+F 2 "" H 2500 1500 50  0001 C CNN
+F 3 "~" H 2500 1500 50  0001 C CNN
+	1    2500 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_Small D101
+U 1 1 62285ECF
+P 3000 1500
+F 0 "D101" H 2950 1650 50  0000 L CNN
+F 1 "Green" H 2900 1400 50  0000 L CNN
+F 2 "" V 3000 1500 50  0001 C CNN
+F 3 "~" V 3000 1500 50  0001 C CNN
+	1    3000 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small_US R104
+U 1 1 622867D5
+P 2500 2000
+F 0 "R104" V 2650 1950 50  0000 L CNN
+F 1 "10K" V 2400 1950 50  0000 L CNN
+F 2 "" H 2500 2000 50  0001 C CNN
+F 3 "~" H 2500 2000 50  0001 C CNN
+	1    2500 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R105
+U 1 1 62286CBA
+P 3000 2000
+F 0 "R105" V 3150 1950 50  0000 L CNN
+F 1 "1K" V 2900 1950 50  0000 L CNN
+F 2 "" H 3000 2000 50  0001 C CNN
+F 3 "~" H 3000 2000 50  0001 C CNN
+	1    3000 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_PNP_BCE Q101
+U 1 1 62287DCD
+P 2400 2500
+F 0 "Q101" H 2600 2550 50  0000 L CNN
+F 1 "Q_PNP_BCE" H 2600 2450 50  0000 L CNN
+F 2 "" H 2600 2600 50  0001 C CNN
+F 3 "~" H 2400 2500 50  0001 C CNN
+	1    2400 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small_US R107
+U 1 1 62288D02
+P 2500 3000
+F 0 "R107" V 2650 2950 50  0000 L CNN
+F 1 "1K" V 2400 2950 50  0000 L CNN
+F 2 "" H 2500 3000 50  0001 C CNN
+F 3 "~" H 2500 3000 50  0001 C CNN
+	1    2500 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q102
+U 1 1 6228999F
+P 3100 3000
+F 0 "Q102" H 3300 3050 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 3300 2950 50  0000 L CNN
+F 2 "" H 3300 3100 50  0001 C CNN
+F 3 "~" H 3100 3000 50  0001 C CNN
+	1    3100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW101
+U 1 1 6228B12F
+P 2900 3500
+F 0 "SW101" H 2950 3600 50  0000 L CNN
+F 1 "STOP" H 2900 3440 50  0000 C CNN
+F 2 "" H 2900 3700 50  0001 C CNN
+F 3 "~" H 2900 3700 50  0001 C CNN
+	1    2900 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW102
+U 1 1 6228B4A8
+P 3650 3500
+F 0 "SW102" H 3700 3600 50  0000 L CNN
+F 1 "START" H 3650 3440 50  0000 C CNN
+F 2 "" H 3650 3700 50  0001 C CNN
+F 3 "~" H 3650 3700 50  0001 C CNN
+	1    3650 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1500 2300 1500
+Connection ~ 1500 1500
+Wire Wire Line
+	2600 1500 2900 1500
+Wire Wire Line
+	2400 2000 2300 2000
+Wire Wire Line
+	2300 2000 2300 1500
+Connection ~ 2300 1500
+Wire Wire Line
+	2300 1500 1700 1500
+Wire Wire Line
+	2300 2000 2300 2300
+Connection ~ 2300 2000
+Wire Wire Line
+	2300 2700 2300 3000
+Wire Wire Line
+	2300 3000 2400 3000
+Wire Wire Line
+	2600 2000 2700 2000
+Wire Wire Line
+	2700 2000 2700 2500
+Wire Wire Line
+	2700 2500 2600 2500
+Connection ~ 2700 2000
+Wire Wire Line
+	2700 2000 2900 2000
+Wire Wire Line
+	3100 1500 3200 1500
+Wire Wire Line
+	3200 1500 3200 2000
+Wire Wire Line
+	3200 2000 3100 2000
+Wire Wire Line
+	3200 2000 3200 2700
+Connection ~ 3200 2000
+Wire Wire Line
+	3850 3500 3950 3500
+Wire Wire Line
+	3950 3500 3950 2700
+Wire Wire Line
+	3950 2700 3200 2700
+Connection ~ 3200 2700
+Wire Wire Line
+	3200 2700 3200 2800
+Wire Wire Line
+	2600 3000 2650 3000
+Wire Wire Line
+	2650 3000 2650 3500
+Connection ~ 2650 3000
+Wire Wire Line
+	2650 3000 2900 3000
+Wire Wire Line
+	2650 3500 2700 3500
+Wire Wire Line
+	3200 3200 3200 3500
+Wire Wire Line
+	3100 3500 3200 3500
+Connection ~ 3200 3500
+Wire Wire Line
+	3200 3500 3350 3500
+$Comp
+L power:GND #PWR0103
+U 1 1 622909AC
+P 3350 3550
+F 0 "#PWR0103" H 3350 3300 50  0001 C CNN
+F 1 "GND" H 3350 3400 50  0000 C CNN
+F 2 "" H 3350 3550 50  0001 C CNN
+F 3 "" H 3350 3550 50  0001 C CNN
+	1    3350 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3550 3350 3500
+Connection ~ 3350 3500
+Wire Wire Line
+	3350 3500 3450 3500
+Text Notes 1350 1000 0    79   ~ 0
+ON-OFF circuit - double push-button
+Wire Wire Line
+	3500 1500 3200 1500
+Connection ~ 3200 1500
+$Comp
+L Device:R_POT_US RV101
+U 1 1 62294163
+P 5500 2000
+F 0 "RV101" H 5300 2100 50  0000 C CNN
+F 1 "1M" H 5300 2000 50  0000 C CNN
+F 2 "" H 5500 2000 50  0001 C CNN
+F 3 "~" H 5500 2000 50  0001 C CNN
+	1    5500 2000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3500 1500 2    50   Output ~ 0
+GND_MAIN
+Text GLabel 6100 2900 0    50   Input ~ 0
+GND_MAIN
+NoConn ~ 5500 1850
+$Comp
+L Timer:LM555xN U101
+U 1 1 6229576B
+P 7500 2200
+F 0 "U101" H 7100 2550 50  0000 L CNN
+F 1 "LM555xN" H 7600 2550 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 8150 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 8350 1800 50  0001 C CNN
+	1    7500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R106
+U 1 1 622975A1
+P 5500 2400
+F 0 "R106" H 5650 2350 50  0000 L CNN
+F 1 "100K" H 5650 2450 50  0000 L CNN
+F 2 "" H 5500 2400 50  0001 C CNN
+F 3 "~" H 5500 2400 50  0001 C CNN
+	1    5500 2400
+	-1   0    0    1   
+$EndComp
+Text Label 5050 2900 0    50   ~ 0
+discharge
+Wire Wire Line
+	5500 2150 5500 2300
+Wire Wire Line
+	5500 2500 5500 2900
+Wire Wire Line
+	5500 2900 5050 2900
+$Comp
+L Device:C_Small C101
+U 1 1 6229A604
+P 6250 2400
+F 0 "C101" H 6050 2450 50  0000 L CNN
+F 1 "10nF" H 6000 2300 50  0000 L CNN
+F 2 "" H 6250 2400 50  0001 C CNN
+F 3 "~" H 6250 2400 50  0001 C CNN
+	1    6250 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 1800 1250 2    50   Output ~ 0
+VCC_MAIN
+Wire Wire Line
+	1800 1250 1700 1250
+Wire Wire Line
+	1700 1250 1700 1500
+Connection ~ 1700 1500
+Wire Wire Line
+	1700 1500 1500 1500
+Text GLabel 6900 2400 0    50   Input ~ 0
+VCC_MAIN
+Text GLabel 7400 1500 0    50   Input ~ 0
+VCC_MAIN
+Wire Wire Line
+	7400 1500 7500 1500
+Wire Wire Line
+	7500 1500 7500 1800
+Wire Wire Line
+	7500 2600 7500 2900
+Wire Wire Line
+	5650 2000 7000 2000
+Wire Wire Line
+	6900 2400 7000 2400
+Wire Wire Line
+	6250 2300 6250 2200
+Wire Wire Line
+	6100 2900 6250 2900
+Wire Wire Line
+	6250 2500 6250 2900
+Connection ~ 6250 2900
+Wire Wire Line
+	6250 2900 7500 2900
+Wire Wire Line
+	6250 2200 7000 2200
+Text Label 6650 2000 0    50   ~ 0
+trigger
+Text Label 8500 2400 2    50   ~ 0
+trigger
+Text Label 8500 2200 2    50   ~ 0
+discharge
+Text GLabel 8200 2000 2    50   Output ~ 0
+CLOCK
+Wire Wire Line
+	8000 2000 8200 2000
+Wire Wire Line
+	8000 2400 8500 2400
+$Comp
+L Device:R_Small_US R103
+U 1 1 622A4663
+P 9000 1900
+F 0 "R103" H 9150 1850 50  0000 L CNN
+F 1 "1K" H 9150 1950 50  0000 L CNN
+F 2 "" H 9000 1900 50  0001 C CNN
+F 3 "~" H 9000 1900 50  0001 C CNN
+	1    9000 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9000 2200 9000 2000
+Wire Wire Line
+	8000 2200 9000 2200
+Wire Wire Line
+	7500 1500 9000 1500
+Wire Wire Line
+	9000 1500 9000 1800
+Connection ~ 7500 1500
+Text Notes 5500 1000 0    79   ~ 0
+Clock generation circuit
+$Comp
+L Switch:SW_Push SW103
+U 1 1 6229AA73
+P 10000 3500
+F 0 "SW103" H 10050 3600 50  0000 L CNN
+F 1 "GREEN" H 10000 3440 50  0000 C CNN
+F 2 "" H 10000 3700 50  0001 C CNN
+F 3 "~" H 10000 3700 50  0001 C CNN
+	1    10000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW104
+U 1 1 6229BFAE
+P 10000 4500
+F 0 "SW104" H 10050 4600 50  0000 L CNN
+F 1 "RED" H 10000 4440 50  0000 C CNN
+F 2 "" H 10000 4700 50  0001 C CNN
+F 3 "~" H 10000 4700 50  0001 C CNN
+	1    10000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW105
+U 1 1 6229C3FD
+P 10000 5500
+F 0 "SW105" H 10050 5600 50  0000 L CNN
+F 1 "BLUE" H 10000 5440 50  0000 C CNN
+F 2 "" H 10000 5700 50  0001 C CNN
+F 3 "~" H 10000 5700 50  0001 C CNN
+	1    10000 5500
+	1    0    0    -1  
+$EndComp
+Text GLabel 9200 3500 0    50   Input ~ 0
+VCC_MAIN
+Text GLabel 10500 3500 2    50   Output ~ 0
+GREEN
+Text GLabel 10500 4500 2    50   Output ~ 0
+RED
+Text GLabel 10500 5500 2    50   Output ~ 0
+BLUE
+Wire Wire Line
+	9200 3500 9400 3500
+Text GLabel 9200 4500 0    50   Input ~ 0
+VCC_MAIN
+Wire Wire Line
+	9200 4500 9400 4500
+Text GLabel 9200 5500 0    50   Input ~ 0
+VCC_MAIN
+Wire Wire Line
+	9200 5500 9400 5500
+Wire Wire Line
+	10200 3500 10300 3500
+Wire Wire Line
+	10200 4500 10300 4500
+Wire Wire Line
+	10200 5500 10300 5500
+$Comp
+L Device:R_Small_US R109
+U 1 1 622AD250
+P 10000 4000
+F 0 "R109" V 10150 3950 50  0000 L CNN
+F 1 "10K" V 9900 3950 50  0000 L CNN
+F 2 "" H 10000 4000 50  0001 C CNN
+F 3 "~" H 10000 4000 50  0001 C CNN
+	1    10000 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R108
+U 1 1 622AFAAA
+P 9500 3500
+F 0 "R108" V 9650 3450 50  0000 L CNN
+F 1 "1K" V 9400 3450 50  0000 L CNN
+F 2 "" H 9500 3500 50  0001 C CNN
+F 3 "~" H 9500 3500 50  0001 C CNN
+	1    9500 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9600 3500 9800 3500
+$Comp
+L Device:R_Small_US R110
+U 1 1 622B3D92
+P 9500 4500
+F 0 "R110" V 9650 4450 50  0000 L CNN
+F 1 "1K" V 9400 4450 50  0000 L CNN
+F 2 "" H 9500 4500 50  0001 C CNN
+F 3 "~" H 9500 4500 50  0001 C CNN
+	1    9500 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9600 4500 9800 4500
+$Comp
+L Device:R_Small_US R112
+U 1 1 622B52E5
+P 9500 5500
+F 0 "R112" V 9650 5450 50  0000 L CNN
+F 1 "1K" V 9400 5450 50  0000 L CNN
+F 2 "" H 9500 5500 50  0001 C CNN
+F 3 "~" H 9500 5500 50  0001 C CNN
+	1    9500 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9600 5500 9800 5500
+Text GLabel 9700 4000 0    50   Input ~ 0
+GND_MAIN
+Wire Wire Line
+	9700 4000 9900 4000
+Wire Wire Line
+	10100 4000 10300 4000
+Wire Wire Line
+	10300 4000 10300 3500
+Connection ~ 10300 3500
+Wire Wire Line
+	10300 3500 10500 3500
+$Comp
+L Device:R_Small_US R111
+U 1 1 622B8F08
+P 10000 5000
+F 0 "R111" V 10150 4950 50  0000 L CNN
+F 1 "10K" V 9900 4950 50  0000 L CNN
+F 2 "" H 10000 5000 50  0001 C CNN
+F 3 "~" H 10000 5000 50  0001 C CNN
+	1    10000 5000
+	0    1    1    0   
+$EndComp
+Text GLabel 9700 5000 0    50   Input ~ 0
+GND_MAIN
+Wire Wire Line
+	9700 5000 9900 5000
+Wire Wire Line
+	10100 5000 10300 5000
+Wire Wire Line
+	10300 5000 10300 4500
+$Comp
+L Device:R_Small_US R113
+U 1 1 622BA888
+P 10000 6000
+F 0 "R113" V 10150 5950 50  0000 L CNN
+F 1 "10K" V 9900 5950 50  0000 L CNN
+F 2 "" H 10000 6000 50  0001 C CNN
+F 3 "~" H 10000 6000 50  0001 C CNN
+	1    10000 6000
+	0    1    1    0   
+$EndComp
+Text GLabel 9700 6000 0    50   Input ~ 0
+GND_MAIN
+Wire Wire Line
+	9700 6000 9900 6000
+Wire Wire Line
+	10100 6000 10300 6000
+Wire Wire Line
+	10300 6000 10300 5500
+Text Notes 9200 3000 0    79   ~ 0
+Commands circuit
+Connection ~ 10300 4500
+Wire Wire Line
+	10300 4500 10500 4500
+Connection ~ 10300 5500
+Wire Wire Line
+	10300 5500 10500 5500
+Wire Notes Line
+	10700 2750 8500 2750
+Wire Notes Line
+	8500 2750 8500 6250
+$Comp
+L Device:R_Small_US R102
+U 1 1 622C0704
+P 9750 1500
+F 0 "R102" V 9900 1450 50  0000 L CNN
+F 1 "1K" V 9650 1450 50  0000 L CNN
+F 2 "" H 9750 1500 50  0001 C CNN
+F 3 "~" H 9750 1500 50  0001 C CNN
+	1    9750 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_Small D102
+U 1 1 622C070A
+P 10250 1500
+F 0 "D102" H 10200 1650 50  0000 L CNN
+F 1 "Red" H 10150 1400 50  0000 L CNN
+F 2 "" V 10250 1500 50  0001 C CNN
+F 3 "~" V 10250 1500 50  0001 C CNN
+	1    10250 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9650 1500 9550 1500
+Wire Wire Line
+	9850 1500 10150 1500
+Wire Wire Line
+	10350 1500 10450 1500
+Text GLabel 9550 1500 0    50   Input ~ 0
+CLOCK
+Text GLabel 10450 1500 2    50   Output ~ 0
+GND_MAIN
+$Comp
+L cd4015:CD4015_DUAL_4-BIT_STATIC_SHIFT_REGISTER_PHY U102
+U 1 1 622DD5F6
+P 5250 4750
+F 0 "U102" H 4900 5400 50  0000 L TNN
+F 1 "CD4015 for RED" H 4900 5300 50  0000 L TNB
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 4900 5500 50  0001 L TNN
+F 3 "https://pdf1.alldatasheet.fr/datasheet-pdf/view/80385/NSC/CD4015/+50_87UKPC/1D.t9Az+/datasheet.pdf" H 4900 5600 50  0001 L TNN
+	1    5250 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J102
+U 1 1 622DFB17
+P 1500 5250
+F 0 "J102" H 1500 5750 50  0000 C CNN
+F 1 "To RED display" H 1500 4650 50  0000 C CNN
+F 2 "" H 1500 5250 50  0001 C CNN
+F 3 "~" H 1500 5250 50  0001 C CNN
+	1    1500 5250
+	1    0    0    -1  
+$EndComp
+Text GLabel 950  6000 0    50   Input ~ 0
+GND_MAIN
+Text GLabel 4500 5100 0    50   Input ~ 0
+GND_MAIN
+Text GLabel 6000 4400 2    50   Input ~ 0
+VCC_MAIN
+Text GLabel 4500 5000 0    50   Input ~ 0
+RED
+Text Label 4350 4800 0    50   ~ 0
+red1
+Text Label 4350 4700 0    50   ~ 0
+red2
+Text Label 4350 4600 0    50   ~ 0
+red3
+Text Label 6150 5000 2    50   ~ 0
+red4
+Text Label 6150 4700 2    50   ~ 0
+red5
+Text Label 6150 4800 2    50   ~ 0
+red6
+Text Label 6150 4900 2    50   ~ 0
+red7
+Text Label 4350 4500 0    50   ~ 0
+red8
+Text Label 1200 4850 2    50   ~ 0
+red1
+Text Label 1200 4950 2    50   ~ 0
+red2
+Text Label 1200 5050 2    50   ~ 0
+red3
+Text Label 1200 5150 2    50   ~ 0
+red4
+Text Label 1200 5250 2    50   ~ 0
+red5
+Text Label 1200 5350 2    50   ~ 0
+red6
+Text Label 1200 5450 2    50   ~ 0
+red7
+Text Label 1200 5550 2    50   ~ 0
+red8
+Text GLabel 4500 4900 0    50   Input ~ 0
+GND_MAIN
+Text GLabel 6150 4600 2    50   Input ~ 0
+GND_MAIN
+Wire Wire Line
+	5900 4400 6000 4400
+Wire Wire Line
+	5900 5100 6000 5100
+Wire Wire Line
+	4350 4400 4600 4400
+Wire Wire Line
+	4350 4500 4600 4500
+Wire Wire Line
+	4350 4600 4600 4600
+Wire Wire Line
+	4350 4700 4600 4700
+Wire Wire Line
+	4350 4800 4600 4800
+Wire Wire Line
+	4500 4900 4600 4900
+Wire Wire Line
+	4500 5000 4600 5000
+Wire Wire Line
+	4500 5100 4600 5100
+Wire Wire Line
+	5900 4700 6150 4700
+Wire Wire Line
+	5900 4800 6150 4800
+Wire Wire Line
+	5900 4900 6150 4900
+Text GLabel 6000 5100 2    50   Input ~ 0
+CLOCK
+Text GLabel 4350 4400 0    50   Input ~ 0
+CLOCK
+Wire Wire Line
+	1200 4850 1300 4850
+Wire Wire Line
+	1200 4950 1300 4950
+Wire Wire Line
+	1200 5050 1300 5050
+Wire Wire Line
+	1200 5150 1300 5150
+Wire Wire Line
+	1200 5250 1300 5250
+Wire Wire Line
+	1200 5350 1300 5350
+Wire Wire Line
+	1200 5450 1300 5450
+Wire Wire Line
+	1200 5550 1300 5550
+NoConn ~ 1300 5650
+Wire Wire Line
+	5900 4600 6150 4600
+Wire Wire Line
+	6700 4500 6700 5000
+Wire Wire Line
+	5900 5000 6700 5000
+Wire Wire Line
+	5900 4500 6700 4500
+$Comp
+L cd4015:CD4015_DUAL_4-BIT_STATIC_SHIFT_REGISTER_PHY U103
+U 1 1 62353B97
+P 5250 5950
+F 0 "U103" H 4900 6600 50  0000 L TNN
+F 1 "CD4015 for GREEN" H 4900 6500 50  0000 L TNB
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 4900 6700 50  0001 L TNN
+F 3 "https://pdf1.alldatasheet.fr/datasheet-pdf/view/80385/NSC/CD4015/+50_87UKPC/1D.t9Az+/datasheet.pdf" H 4900 6800 50  0001 L TNN
+	1    5250 5950
+	1    0    0    -1  
+$EndComp
+Text GLabel 4500 6300 0    50   Input ~ 0
+GND_MAIN
+Text GLabel 6000 5600 2    50   Input ~ 0
+VCC_MAIN
+Text GLabel 4500 6200 0    50   Input ~ 0
+GREEN
+Text GLabel 4500 6100 0    50   Input ~ 0
+GND_MAIN
+Text GLabel 6150 5800 2    50   Input ~ 0
+GND_MAIN
+Wire Wire Line
+	5900 5600 6000 5600
+Wire Wire Line
+	5900 6300 6000 6300
+Wire Wire Line
+	4350 5600 4600 5600
+Wire Wire Line
+	4350 5700 4600 5700
+Wire Wire Line
+	4350 5800 4600 5800
+Wire Wire Line
+	4350 5900 4600 5900
+Wire Wire Line
+	4350 6000 4600 6000
+Wire Wire Line
+	4500 6100 4600 6100
+Wire Wire Line
+	4500 6200 4600 6200
+Wire Wire Line
+	4500 6300 4600 6300
+Wire Wire Line
+	5900 5900 6150 5900
+Wire Wire Line
+	5900 6000 6150 6000
+Wire Wire Line
+	5900 6100 6150 6100
+Text GLabel 6000 6300 2    50   Input ~ 0
+CLOCK
+Text GLabel 4350 5600 0    50   Input ~ 0
+CLOCK
+Wire Wire Line
+	5900 5800 6150 5800
+Wire Wire Line
+	6700 5700 6700 6200
+Wire Wire Line
+	5900 6200 6700 6200
+Wire Wire Line
+	5900 5700 6700 5700
+Text Label 4350 6000 0    50   ~ 0
+grn1
+Text Label 4350 5900 0    50   ~ 0
+grn2
+Text Label 4350 5800 0    50   ~ 0
+grn3
+Text Label 6150 6200 2    50   ~ 0
+grn4
+Text Label 6150 5900 2    50   ~ 0
+grn5
+Text Label 6150 6000 2    50   ~ 0
+grn6
+Text Label 6150 6100 2    50   ~ 0
+grn7
+Text Label 4350 5700 0    50   ~ 0
+grn8
+Text Label 2200 4850 2    50   ~ 0
+grn1
+Text Label 2200 4950 2    50   ~ 0
+grn2
+Text Label 2200 5050 2    50   ~ 0
+grn3
+Text Label 2200 5150 2    50   ~ 0
+grn4
+Text Label 2200 5250 2    50   ~ 0
+grn5
+Text Label 2200 5350 2    50   ~ 0
+grn6
+Text Label 2200 5450 2    50   ~ 0
+grn7
+Text Label 2200 5550 2    50   ~ 0
+grn8
+$Comp
+L cd4015:CD4015_DUAL_4-BIT_STATIC_SHIFT_REGISTER_PHY U104
+U 1 1 62395819
+P 5250 7150
+F 0 "U104" H 4900 7800 50  0000 L TNN
+F 1 "CD4015 for BLUE" H 4900 7700 50  0000 L TNB
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 4900 7900 50  0001 L TNN
+F 3 "https://pdf1.alldatasheet.fr/datasheet-pdf/view/80385/NSC/CD4015/+50_87UKPC/1D.t9Az+/datasheet.pdf" H 4900 8000 50  0001 L TNN
+	1    5250 7150
+	1    0    0    -1  
+$EndComp
+Text GLabel 4500 7500 0    50   Input ~ 0
+GND_MAIN
+Text GLabel 6000 6800 2    50   Input ~ 0
+VCC_MAIN
+Text GLabel 4500 7400 0    50   Input ~ 0
+BLUE
+Text GLabel 4500 7300 0    50   Input ~ 0
+GND_MAIN
+Text GLabel 6150 7000 2    50   Input ~ 0
+GND_MAIN
+Wire Wire Line
+	5900 6800 6000 6800
+Wire Wire Line
+	5900 7500 6000 7500
+Wire Wire Line
+	4350 6800 4600 6800
+Wire Wire Line
+	4350 6900 4600 6900
+Wire Wire Line
+	4350 7000 4600 7000
+Wire Wire Line
+	4350 7100 4600 7100
+Wire Wire Line
+	4350 7200 4600 7200
+Wire Wire Line
+	4500 7300 4600 7300
+Wire Wire Line
+	4500 7400 4600 7400
+Wire Wire Line
+	4500 7500 4600 7500
+Wire Wire Line
+	5900 7100 6150 7100
+Wire Wire Line
+	5900 7200 6150 7200
+Wire Wire Line
+	5900 7300 6150 7300
+Text GLabel 6000 7500 2    50   Input ~ 0
+CLOCK
+Text GLabel 4350 6800 0    50   Input ~ 0
+CLOCK
+Wire Wire Line
+	5900 7000 6150 7000
+Wire Wire Line
+	6700 6900 6700 7400
+Wire Wire Line
+	5900 7400 6700 7400
+Wire Wire Line
+	5900 6900 6700 6900
+Text Label 4350 7200 0    50   ~ 0
+blu1
+Text Label 4350 7100 0    50   ~ 0
+blu2
+Text Label 4350 7000 0    50   ~ 0
+blu3
+Text Label 6150 7400 2    50   ~ 0
+blu4
+Text Label 6150 7100 2    50   ~ 0
+blu5
+Text Label 6150 7200 2    50   ~ 0
+blu6
+Text Label 6150 7300 2    50   ~ 0
+blu7
+Text Label 4350 6900 0    50   ~ 0
+blu8
+Text Label 3200 4850 2    50   ~ 0
+blu1
+Text Label 3200 4950 2    50   ~ 0
+blu2
+Text Label 3200 5050 2    50   ~ 0
+blu3
+Text Label 3200 5150 2    50   ~ 0
+blu4
+Text Label 3200 5250 2    50   ~ 0
+blu5
+Text Label 3200 5350 2    50   ~ 0
+blu6
+Text Label 3200 5450 2    50   ~ 0
+blu7
+Text Label 3200 5550 2    50   ~ 0
+blu8
+$Comp
+L Connector_Generic:Conn_01x10 J103
+U 1 1 623ECFC2
+P 2500 5250
+F 0 "J103" H 2500 5750 50  0000 C CNN
+F 1 "To GREEN display" H 2500 4650 50  0000 C CNN
+F 2 "" H 2500 5250 50  0001 C CNN
+F 3 "~" H 2500 5250 50  0001 C CNN
+	1    2500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J104
+U 1 1 623EDDC4
+P 3500 5250
+F 0 "J104" H 3500 5750 50  0000 C CNN
+F 1 "To BLUE display" H 3500 4650 50  0000 C CNN
+F 2 "" H 3500 5250 50  0001 C CNN
+F 3 "~" H 3500 5250 50  0001 C CNN
+	1    3500 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4850 2300 4850
+Wire Wire Line
+	2200 4950 2300 4950
+Wire Wire Line
+	2200 5050 2300 5050
+Wire Wire Line
+	2200 5150 2300 5150
+Wire Wire Line
+	2200 5250 2300 5250
+Wire Wire Line
+	2200 5350 2300 5350
+Wire Wire Line
+	2200 5450 2300 5450
+Wire Wire Line
+	2200 5550 2300 5550
+Wire Wire Line
+	3200 4850 3300 4850
+Wire Wire Line
+	3200 4950 3300 4950
+Wire Wire Line
+	3200 5050 3300 5050
+Wire Wire Line
+	3200 5150 3300 5150
+Wire Wire Line
+	3200 5250 3300 5250
+Wire Wire Line
+	3200 5350 3300 5350
+Wire Wire Line
+	3200 5450 3300 5450
+Wire Wire Line
+	3200 5550 3300 5550
+NoConn ~ 3300 5650
+NoConn ~ 2300 5650
+Text Notes 4750 4000 0    79   ~ 0
+Animation circuit ×3
+Wire Notes Line
+	4500 3750 4500 750 
+Wire Wire Line
+	1100 5750 1100 6000
+Wire Wire Line
+	1100 6000 950  6000
+Wire Wire Line
+	1100 5750 1300 5750
+Wire Wire Line
+	1100 6000 2100 6000
+Wire Wire Line
+	3100 6000 3100 5750
+Wire Wire Line
+	3100 5750 3300 5750
+Connection ~ 1100 6000
+Wire Wire Line
+	2100 6000 2100 5750
+Wire Wire Line
+	2100 5750 2300 5750
+Connection ~ 2100 6000
+Wire Wire Line
+	2100 6000 3100 6000
+Text Notes 1550 4500 0    79   ~ 0
+Output port ×3
+Wire Notes Line
+	3900 6650 3900 3750
+Wire Notes Line
+	3900 3750 8500 3750
+Wire Notes Line
+	3900 4000 650  4000
+$EndSCHEMATC
