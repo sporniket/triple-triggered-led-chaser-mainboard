@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name cd4015)(type Legacy)(uri ${KIPRJMOD}/kicad-symbols-generated/ics/commons/cd4015.lib)(options "")(descr ""))
+  (lib (name lm555)(type Legacy)(uri ${KIPRJMOD}/kicad-symbols-generated/ics/commons/lm555.lib)(options "")(descr ""))
 )
