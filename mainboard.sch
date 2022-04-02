@@ -1030,4 +1030,23 @@ Wire Wire Line
 Connection ~ 5750 7250
 Wire Wire Line
 	5750 7250 6150 7250
+$Comp
+L Device:CP1_Small C6
+U 1 1 6251FAFE
+P 8150 2100
+F 0 "C6" H 8200 2200 50  0000 L CNN
+F 1 "1uF" H 8200 2000 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm" H 8150 2100 50  0001 C CNN
+F 3 "~" H 8150 2100 50  0001 C CNN
+	1    8150 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2000 8150 1900
+Connection ~ 8150 1900
+Wire Wire Line
+	8150 2200 8150 2300
+Wire Wire Line
+	8150 2300 6750 2300
+Connection ~ 6750 2300
 $EndSCHEMATC
