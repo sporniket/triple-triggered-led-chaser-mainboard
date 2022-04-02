@@ -946,4 +946,88 @@ Wire Notes Line
 	650  4000 4500 4000
 Wire Notes Line
 	8500 2500 8500 6250
+$Comp
+L Device:C_Small C2
+U 1 1 6249338B
+P 10500 1500
+F 0 "C2" H 10510 1570 50  0000 L CNN
+F 1 "0.1uF" H 10510 1420 50  0000 L CNN
+F 2 "" H 10500 1500 50  0001 C CNN
+F 3 "~" H 10500 1500 50  0001 C CNN
+	1    10500 1500
+	1    0    0    -1  
+$EndComp
+Text GLabel 10500 1250 1    50   Input ~ 0
+VCC_MAIN
+Text GLabel 10500 1750 3    50   Output ~ 0
+GND_MAIN
+Wire Wire Line
+	10500 1250 10500 1400
+Wire Wire Line
+	10500 1600 10500 1750
+$Comp
+L Device:C_Small C3
+U 1 1 624A9B0B
+P 5350 7000
+F 0 "C3" H 5360 7070 50  0000 L CNN
+F 1 "0.1uF" H 5360 6920 50  0000 L CNN
+F 2 "" H 5350 7000 50  0001 C CNN
+F 3 "~" H 5350 7000 50  0001 C CNN
+	1    5350 7000
+	1    0    0    -1  
+$EndComp
+Text GLabel 6500 6750 2    50   Input ~ 0
+VCC_MAIN
+Text GLabel 5000 7250 0    50   Output ~ 0
+GND_MAIN
+Wire Wire Line
+	5350 6750 5350 6900
+Wire Wire Line
+	5350 7100 5350 7250
+$Comp
+L Device:C_Small C4
+U 1 1 624BF473
+P 5750 7000
+F 0 "C4" H 5760 7070 50  0000 L CNN
+F 1 "0.1uF" H 5760 6920 50  0000 L CNN
+F 2 "" H 5750 7000 50  0001 C CNN
+F 3 "~" H 5750 7000 50  0001 C CNN
+	1    5750 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6750 5750 6900
+Wire Wire Line
+	5750 7100 5750 7250
+$Comp
+L Device:C_Small C5
+U 1 1 624CB4FE
+P 6150 7000
+F 0 "C5" H 6160 7070 50  0000 L CNN
+F 1 "0.1uF" H 6160 6920 50  0000 L CNN
+F 2 "" H 6150 7000 50  0001 C CNN
+F 3 "~" H 6150 7000 50  0001 C CNN
+	1    6150 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 6750 6150 6900
+Wire Wire Line
+	6150 7100 6150 7250
+Wire Wire Line
+	6500 6750 6150 6750
+Connection ~ 5750 6750
+Wire Wire Line
+	5750 6750 5350 6750
+Connection ~ 6150 6750
+Wire Wire Line
+	6150 6750 5750 6750
+Wire Wire Line
+	5000 7250 5350 7250
+Connection ~ 5350 7250
+Wire Wire Line
+	5350 7250 5750 7250
+Connection ~ 5750 7250
+Wire Wire Line
+	5750 7250 6150 7250
 $EndSCHEMATC
