@@ -95,7 +95,7 @@ F 3 "~" H 3000 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Q_PNP_BCE Q1
+L Device:Q_PNP_EBC Q1
 U 1 1 62287DCD
 P 2400 2500
 F 0 "Q1" H 2600 2550 50  0000 L CNN
@@ -117,7 +117,7 @@ F 3 "~" H 2500 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Q_NPN_BCE Q2
+L Device:Q_NPN_CBE Q2
 U 1 1 6228999F
 P 3100 3000
 F 0 "Q2" H 3300 3050 50  0000 L CNN
