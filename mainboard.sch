@@ -944,8 +944,6 @@ Wire Notes Line
 	4500 750  4500 7600
 Wire Notes Line
 	650  4000 4500 4000
-Wire Notes Line
-	8500 2500 8500 6250
 $Comp
 L Device:C_Small C2
 U 1 1 6249338B
@@ -1049,4 +1047,78 @@ Wire Wire Line
 Wire Wire Line
 	8150 2300 6750 2300
 Connection ~ 6750 2300
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 624A57EA
+P 8750 6350
+F 0 "H2" H 8750 6550 50  0000 C CNN
+F 1 "Frame" H 8750 6475 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 8750 6350 50  0001 C CNN
+F 3 "~" H 8750 6350 50  0001 C CNN
+	1    8750 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 624A5A1B
+P 9050 6350
+F 0 "H3" H 9050 6550 50  0000 C CNN
+F 1 "Frame" H 9050 6475 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 9050 6350 50  0001 C CNN
+F 3 "~" H 9050 6350 50  0001 C CNN
+	1    9050 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 624A5C60
+P 9350 6350
+F 0 "H4" H 9350 6550 50  0000 C CNN
+F 1 "Frame" H 9350 6475 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 9350 6350 50  0001 C CNN
+F 3 "~" H 9350 6350 50  0001 C CNN
+	1    9350 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 624A5F47
+P 10000 6350
+F 0 "H5" H 10000 6550 50  0000 C CNN
+F 1 "Battery holder" H 10000 6475 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 10000 6350 50  0001 C CNN
+F 3 "~" H 10000 6350 50  0001 C CNN
+	1    10000 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 624A629B
+P 10650 6350
+F 0 "H6" H 10650 6550 50  0000 C CNN
+F 1 "Battery holder" H 10650 6475 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 10650 6350 50  0001 C CNN
+F 3 "~" H 10650 6350 50  0001 C CNN
+	1    10650 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 624A65F8
+P 8450 6350
+F 0 "H1" H 8450 6550 50  0000 C CNN
+F 1 "Frame" H 8450 6475 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 8450 6350 50  0001 C CNN
+F 3 "~" H 8450 6350 50  0001 C CNN
+	1    8450 6350
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	7900 6500 7900 5750
+Wire Notes Line
+	7900 5750 11150 5750
+Wire Notes Line
+	8450 5750 8450 2500
+Text Notes 9050 5900 0    79   ~ 0
+Mounting holes
 $EndSCHEMATC
